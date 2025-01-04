@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discriminative vs. Generative Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Discriminative vs. Generative Models</h1>
+    <p>
+        In machine learning, there are two main types of models: discriminative and generative. These two classes are fundamentally different in terms of their objectives, approaches to learning, and applications.
+    </p>
+
+    <h2>Discriminative Models</h2>
+    <p>
+        Discriminative models are focused on finding decision boundaries between classes in a dataset. They model the conditional probability P(y∣X), where y is the label (or class) and X is the input data. In simple terms, a discriminative model tries to directly classify data by learning the distinctions between different classes without modeling the distribution of the input data itself.
+    </p>
+    <h3>How Discriminative Models Work</h3>
+    <p>
+        Discriminative models work by learning which features in the data are most predictive of the target label. For example, in a dataset of emails labeled as "spam" or "not spam," a discriminative model will learn features that help distinguish spam emails (e.g., specific keywords or patterns) from non-spam emails.
+    </p>
+    <h3>Common Examples of Discriminative Models</h3>
+    <ul>
+        <li>Logistic Regression</li>
+        <li>Support Vector Machines (SVM)</li>
+        <li>Decision Trees</li>
+        <li>Neural Networks</li>
+        <li>Conditional Random Fields (CRFs)</li>
+    </ul>
+
+    <h2>Generative Models</h2>
+    <p>
+        Generative models, in contrast, aim to understand the underlying distribution of the data by modeling the joint probability P(X,y). They attempt to generate data points similar to those in the training set, which allows them not only to classify data but also to create new data that resembles the original dataset.
+    </p>
+    <h3>How Generative Models Work</h3>
+    <p>
+        Generative models focus on learning how data points are generated in a specific category. For instance, in a facial recognition dataset, a generative model learns the characteristics of faces in general and can then generate new, realistic faces or predict if a face is likely to belong to a particular category.
+    </p>
+    <h3>Common Examples of Generative Models</h3>
+    <ul>
+        <li>Naive Bayes</li>
+        <li>Gaussian Mixture Models (GMMs)</li>
+        <li>Hidden Markov Models (HMMs)</li>
+        <li>Variational Autoencoders (VAEs)</li>
+        <li>Generative Adversarial Networks (GANs)</li>
+    </ul>
+
+    <h2>When to Use Discriminative Models</h2>
+    <p>
+        Discriminative models are preferred when the task requires precise classification or regression. Examples include:
+    </p>
+    <ul>
+        <li>Binary and Multiclass Classification</li>
+        <li>Image and Object Recognition</li>
+        <li>Natural Language Processing (NLP) tasks</li>
+    </ul>
+
+    <h2>When to Use Generative Models</h2>
+    <p>
+        Generative models are ideal for understanding data structure and creating new data. Examples include:
+    </p>
+    <ul>
+        <li>Data Augmentation</li>
+        <li>Anomaly Detection</li>
+        <li>Text Generation and Language Modeling</li>
+        <li>Simulation and Prediction</li>
+    </ul>
+
+    <h2>Example Comparison</h2>
+    <h3>Spam Detection</h3>
+    <p><strong>Using a Discriminative Model:</strong> Learns the probability of an email being spam given its features.</p>
+    <p><strong>Using a Generative Model:</strong> Models the likelihood of features in spam and non-spam emails to calculate probabilities.</p>
+
+    <h3>Image Generation</h3>
+    <p><strong>Using a Discriminative Model:</strong> Classifies images as "cat" or "dog."</p>
+    <p><strong>Using a Generative Model:</strong> Generates new images of cats or dogs based on learned patterns.</p>
+
+    <h2>Conclusion</h2>
+    <p>
+        Both discriminative and generative models serve essential roles in machine learning and AI. Discriminative models are generally preferred for classification tasks due to their efficiency and accuracy, while generative models excel in applications requiring an understanding of data distribution or data generation. Choosing the right model depends on the problem's requirements, data availability, and desired output.
+    </p>
+</body>
+</html>
