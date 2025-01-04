@@ -37,11 +37,9 @@
             flex-grow: 1;
             padding: 0;
             background-color: #f9f9f9;
-            overflow: hidden;
         }
         iframe {
             width: 100%;
-            height: 100vh;
             border: none;
         }
     </style>
@@ -58,18 +56,25 @@
             <a href="https://www.amazon.com/dp/B0DPPVNDCY" target="_blank">Soft Cover</a>
             <a href="https://www.amazon.com/dp/B0DPQ457NK" target="_blank">Hard Cover</a>
             <h2>Articles</h2> 
-            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
-            <a href="Bias and Variance.HTML" target="content-frame">Bias and Variance</a>
-            <a href="Exploring Wearables.HTML" target="content-frame">Exploring Wearables</a>
-            <a href="Evaluation Metrics in Machine Learning.HTML" target="content-frame">Evaluation Metrics in Machine Learning</a>
-            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
-            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
-            <a href="Blending Clinical and Lifestyle Data.html" target="content-frame">Blending Clinical and Lifestyle Data</a>
+            <a href="Evaluating_Foundational_Models.html" target="content-frame">Evaluating Foundational Models</a>
+            <a href="Bias_and_Variance.html" target="content-frame">Bias and Variance</a>
+            <a href="Exploring_Wearables.html" target="content-frame">Exploring Wearables</a>
+            <a href="Evaluation_Metrics_in_Machine_Learning.html" target="content-frame">Evaluation Metrics in Machine Learning</a>
+            <a href="Blending_Clinical_and_Lifestyle_Data.html" target="content-frame">Blending Clinical and Lifestyle Data</a>
             <a href="Understanding_Transfer_Learning.html" target="content-frame">Understanding Transfer Learning</a>
         </div>
         <div class="content">
-            <iframe name="content-frame" src="aboutme.html"></iframe>
+            <iframe name="content-frame" id="content-frame" src="aboutme.html"></iframe>
         </div>
     </div>
+    <script>
+        // Dynamically adjust iframe height based on its content
+        const iframe = document.getElementById('content-frame');
+
+        iframe.addEventListener('load', () => {
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            iframe.style.height = iframeDocument.body.scrollHeight + 'px';
+        });
+    </script>
 </body>
 </html>
