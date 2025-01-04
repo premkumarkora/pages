@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles Navigation</title>
+    <title>PremKumar Kora - Data Scientist</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,13 +11,15 @@
             padding: 0;
             display: flex;
             height: 100vh;
+            overflow: hidden;
         }
         .navbar {
-            width: 250px;
+            min-width: 250px;
             background-color: #2c3e50;
             color: white;
             padding: 20px;
             box-sizing: border-box;
+            overflow-y: auto; /* Allow scrolling for large content */
         }
         .navbar a {
             color: white;
@@ -29,7 +31,7 @@
             text-decoration: underline;
         }
         .content {
-            flex: 1;
+            flex-grow: 1;
             padding: 0;
             background-color: #f9f9f9;
             overflow: hidden;
@@ -60,7 +62,6 @@
         <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
         <a href="Blending Clinical and Lifestyle Data.html" target="content-frame">Blending Clinical and Lifestyle Data</a>
         <a href="Understanding_Transfer_Learning.html" target="content-frame">Understanding Transfer Learning</a>
-        
     </div>
     <div class="content">
         <iframe name="content-frame" src="aboutme.html"></iframe>
