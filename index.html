@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles Navigation</title>
+    <title>Responsive Articles Navigation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,11 +14,12 @@
         }
         .container {
             display: flex;
+            flex-direction: row;
             flex-grow: 1;
             width: 100%;
         }
         .navbar {
-            width: 250px;
+            flex: 0 0 250px;
             background-color: #2c3e50;
             color: white;
             padding: 20px;
@@ -37,10 +38,20 @@
             flex-grow: 1;
             padding: 0;
             background-color: #f9f9f9;
+            box-sizing: border-box;
         }
         iframe {
             width: 100%;
             border: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .navbar {
+                flex: 0 0 auto;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -56,11 +67,13 @@
             <a href="https://www.amazon.com/dp/B0DPPVNDCY" target="_blank">Soft Cover</a>
             <a href="https://www.amazon.com/dp/B0DPQ457NK" target="_blank">Hard Cover</a>
             <h2>Articles</h2> 
-            <a href="Evaluating Foundational Models.html" target="content-frame">Evaluating Foundational Models</a>
-            <a href="Bias and Variance.html" target="content-frame">Bias and Variance</a>
-            <a href="Exploring Wearables.html" target="content-frame">Exploring Wearables</a>
-            <a href="Evaluation Metrics in Machine Learning.html" target="content-frame">Evaluation Metrics in Machine Learning</a>
-            <a href="Blending Clinical and Lifestyle_Data.html" target="content-frame">Blending Clinical and Lifestyle Data</a>
+            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
+            <a href="Bias and Variance.HTML" target="content-frame">Bias and Variance</a>
+            <a href="Exploring Wearables.HTML" target="content-frame">Exploring Wearables</a>
+            <a href="Evaluation Metrics in Machine Learning.HTML" target="content-frame">Evaluation Metrics in Machine Learning</a>
+            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
+            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
+            <a href="Blending Clinical and Lifestyle Data.html" target="content-frame">Blending Clinical and Lifestyle Data</a>
             <a href="Understanding_Transfer_Learning.html" target="content-frame">Understanding Transfer Learning</a>
         </div>
         <div class="content">
@@ -71,10 +84,16 @@
         // Dynamically adjust iframe height based on its content
         const iframe = document.getElementById('content-frame');
 
-        iframe.addEventListener('load', () => {
+        function adjustIframeHeight() {
             const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
             iframe.style.height = iframeDocument.body.scrollHeight + 'px';
-        });
+        }
+
+        // Adjust height when the iframe loads
+        iframe.addEventListener('load', adjustIframeHeight);
+
+        // Re-adjust height on window resize
+        window.addEventListener('resize', adjustIframeHeight);
     </script>
 </body>
 </html>
