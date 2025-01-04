@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PremKumar Kora - Data Scientist</title>
+    <title>Articles Navigation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            height: 100vh;
-            overflow: hidden;
+            flex-direction: column;
+        }
+        .container {
+            display: flex;
+            flex-grow: 1;
+            width: 100%;
         }
         .navbar {
-            min-width: 250px;
+            width: 250px;
             background-color: #2c3e50;
             color: white;
             padding: 20px;
             box-sizing: border-box;
-            overflow-y: auto; /* Allow scrolling for large content */
         }
         .navbar a {
             color: white;
@@ -38,33 +41,35 @@
         }
         iframe {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border: none;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <h2>Patents</h2>
-        <a href="AI_PRESCRIPTOR.html" target="content-frame">AI_PRESCRIPTOR</a>
-        <a href="AI_Generator.html" target="content-frame">Validate & Prescription Generator</a>
-        <h2>Books</h2>
-        <a href="book1.html" target="content-frame">Artificial Intelligence : For the Decision Makers</a>
-        <a href="https://www.amazon.com/dp/B0DPFM1G72" target="_blank">Kindle Edition</a>
-        <a href="https://www.amazon.com/dp/B0DPPVNDCY" target="_blank">Soft Cover</a>
-        <a href="https://www.amazon.com/dp/B0DPQ457NK" target="_blank">Hard Cover</a>
-        <h2>Articles</h2> 
-        <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
-        <a href="Bias and Variance.HTML" target="content-frame">Bias and Variance</a>
-        <a href="Exploring Wearables.HTML" target="content-frame">Exploring Wearables</a>
-        <a href="Evaluation Metrics in Machine Learning.HTML" target="content-frame">Evaluation Metrics in Machine Learning</a>
-        <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
-        <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
-        <a href="Blending Clinical and Lifestyle Data.html" target="content-frame">Blending Clinical and Lifestyle Data</a>
-        <a href="Understanding_Transfer_Learning.html" target="content-frame">Understanding Transfer Learning</a>
-    </div>
-    <div class="content">
-        <iframe name="content-frame" src="aboutme.html"></iframe>
+    <div class="container">
+        <div class="navbar">
+            <h2>Patents</h2>
+            <a href="AI_PRESCRIPTOR.html" target="content-frame">AI_PRESCRIPTOR</a>
+            <a href="AI_Generator.html" target="content-frame">Validate & Prescription Generator</a>
+            <h2>Books</h2>
+            <a href="book1.html" target="content-frame">Artificial Intelligence : For the Decision Makers</a>
+            <a href="https://www.amazon.com/dp/B0DPFM1G72" target="_blank">Kindle Edition</a>
+            <a href="https://www.amazon.com/dp/B0DPPVNDCY" target="_blank">Soft Cover</a>
+            <a href="https://www.amazon.com/dp/B0DPQ457NK" target="_blank">Hard Cover</a>
+            <h2>Articles</h2> 
+            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
+            <a href="Bias and Variance.HTML" target="content-frame">Bias and Variance</a>
+            <a href="Exploring Wearables.HTML" target="content-frame">Exploring Wearables</a>
+            <a href="Evaluation Metrics in Machine Learning.HTML" target="content-frame">Evaluation Metrics in Machine Learning</a>
+            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
+            <a href="Evaluating Foundational Models.HTML" target="content-frame">Evaluating Foundational Models</a>
+            <a href="Blending Clinical and Lifestyle Data.html" target="content-frame">Blending Clinical and Lifestyle Data</a>
+            <a href="Understanding_Transfer_Learning.html" target="content-frame">Understanding Transfer Learning</a>
+        </div>
+        <div class="content">
+            <iframe name="content-frame" src="aboutme.html"></iframe>
+        </div>
     </div>
 </body>
 </html>
