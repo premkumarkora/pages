@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blending Clinical and Lifestyle Data</title>
+</head>
+<body>
+    <h1>Blending Clinical and Lifestyle Data</h1>
+    <p>
+        Blending clinical and lifestyle data offers a holistic approach to understanding and guiding recovery journeys, particularly for individuals dealing with chronic conditions, injuries, or post-surgical rehabilitation. Traditionally, medical professionals have relied on clinical data such as lab results, diagnostic imaging, and physician observations to monitor patient progress. While these data points are critical, they often miss contextual lifestyle factors like diet, exercise habits, stress levels, sleep quality, and social support — all of which significantly impact a person’s overall health and recovery trajectory. To capture data points from wearables, several key technologies work together to collect, transmit, analyze, and store information effectively.
+    </p>
+
+    <h2>Technologies that Play a Vital Role</h2>
+    <h3>1. Sensors</h3>
+    <p>
+        Wearables have various sensors, each specialized to capture different biometric data. For example, accelerometers track movement, heart rate monitors measure pulse, ECG sensors record electrical heart signals, and skin sensors gauge stress levels through electrodermal activity. These sensors continuously collect data points, giving users and healthcare providers insights into physical activity, cardiovascular health, an
